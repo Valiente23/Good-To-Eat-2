@@ -864,7 +864,7 @@ header {
       #mainNosotros .products .products__container .products__title {
         font-size: 1.5em;
         position: relative;
-        margin: 20px 0;
+        margin: 20px 20px;
         text-align: center; }
       #mainNosotros .products .products__container a .products__button {
         margin: 0; }
@@ -899,9 +899,8 @@ header {
   #mainNosotros .philosophy .philosophy__subtitle {
     font-size: 1rem;
     max-width: 80%; }
-  #mainNosotros .products {
-    grid-template-columns: 100%;
-    grid-template-rows: 300px 450px; }
+  #mainNosotros .products .products__container {
+    height: 300px; }
     #mainNosotros .products .products__container .products__bg {
       display: none; }
     #mainNosotros .products .products__container .products__title {
