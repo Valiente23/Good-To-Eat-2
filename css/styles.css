@@ -1612,5 +1612,7 @@ header {
 @media only screen and (max-width: 768px) {
   #mainCompra {
     height: 600px; }
+    #mainCompra .compra__bg {
+      display: none; }
     #mainCompra .compra__container {
       width: 100%; } }
