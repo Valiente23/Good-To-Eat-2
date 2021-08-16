@@ -649,13 +649,13 @@ header {
   flex-direction: column; }
   #mainRecetas .card__item {
     margin: 0 0 50px 0;
-    padding: 3% 5%;
+    padding: 50px 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: ease-in-out all .2s;
+    transition: ease-in-out all 0.2s;
     border-radius: 3px;
     background: #ebebeb; }
     #mainRecetas .card__item:hover {
@@ -665,13 +665,70 @@ header {
   #mainRecetas .card .card__content-visible {
     display: flex;
     width: 100%;
-    align-items: center; }
+    align-items: center;
+    position: relative; }
+    #mainRecetas .card .card__content-visible .card__angle {
+      font-size: 2em;
+      background-color: #c0a54e;
+      border-radius: 50%;
+      padding: 7px 5px 5px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 25px;
+      top: 40%;
+      cursor: pointer;
+      transition: all ease-in-out 0.3s; }
+    #mainRecetas .card .card__content-visible .rotate {
+      transform: rotate(180deg); }
   #mainRecetas .card__instructions {
-    transition: ease-in-out all .4s;
-    height: 0;
-    overflow: hidden; }
+    transition: ease-in-out all 0.4s;
+    height: 0px;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #e0e0e0;
+    border-radius: 3px;
+    padding: 0 50px;
+    position: relative; }
+    #mainRecetas .card__instructions .card__ingredients {
+      width: 500px;
+      height: 300px; }
+      #mainRecetas .card__instructions .card__ingredients-title {
+        padding: 20px; }
+      #mainRecetas .card__instructions .card__ingredients .text__bold {
+        font-weight: 600;
+        padding: 5px 0; }
+    #mainRecetas .card__instructions .card__elaboration {
+      height: 300px;
+      width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; }
+      #mainRecetas .card__instructions .card__elaboration-title {
+        padding: 20px; }
+      #mainRecetas .card__instructions .card__elaboration .text__bold {
+        font-weight: 600;
+        padding: 5px 0; }
+    #mainRecetas .card__instructions .card__time {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 35px;
+      right: 35px; }
+      #mainRecetas .card__instructions .card__time-text {
+        font-weight: 600;
+        padding: 0 5px; }
+      #mainRecetas .card__instructions .card__time .card__clock {
+        font-size: 1.5em;
+        color: #c0a54e; }
   #mainRecetas .card .show-recetas {
-    height: 400px; }
+    height: 400px;
+    margin-top: 50px; }
   #mainRecetas .card .show-instructions {
     box-shadow: -4px 0px #c0a54e; }
   #mainRecetas .card__img {
@@ -692,46 +749,132 @@ header {
   #mainRecetas .card__desc {
     font-size: 20px;
     padding: 15px 0px;
-    color: #3e3e3e; }
+    color: #3e3e3e;
+    max-width: 90%; }
   #mainRecetas .card__btn {
     margin: 15px 0px; }
 
 #mainRecetas .divider {
   display: none; }
 
+@media only screen and (max-width: 1280px) {
+  #mainRecetas .cards_container .card .card__item .card__content-visible .card__img {
+    width: 200px;
+    height: 200px; }
+  #mainRecetas .cards_container .card .card__item .card__content-visible .card__title {
+    font-size: 1.5em; }
+  #mainRecetas .cards_container .card .card__item .card__content-visible .card__desc {
+    font-size: 1em; }
+  #mainRecetas .cards_container .card .card__item .show-recetas {
+    height: 500px;
+    margin-top: 50px; } }
+
 @media only screen and (max-width: 1024px) {
-  #mainRecetas .cards_container {
-    padding: 10px;
-    margin: 0;
+  #mainRecetas .banner__container {
+    height: 450px; }
+    #mainRecetas .banner__container .banner__container--img {
+      height: 450px; }
+  #mainRecetas .cards_container .cards_header {
+    width: 90%;
+    padding: 0; }
+  #mainRecetas .cards_container .cards__title {
+    font-size: 1.5em; }
+  #mainRecetas .cards_container .cards__desc {
+    font-size: 1em; }
+  #mainRecetas .cards_container .card .card__item .card__content-visible .card__img {
+    width: 200px;
+    height: 200px; }
+  #mainRecetas .cards_container .card .card__item .card__content-visible .card__title {
+    font-size: 1.5em; }
+  #mainRecetas .cards_container .card .card__item .card__content-visible .card__desc {
+    font-size: 1em; }
+  #mainRecetas .cards_container .card .card__item .card__instructions {
+    flex-direction: column; }
+    #mainRecetas .cards_container .card .card__item .card__instructions .card__ingredients {
+      height: max-content; }
+  #mainRecetas .cards_container .card .card__item .show-recetas {
+    height: 700px;
+    margin-top: 50px; } }
+
+@media only screen and (max-width: 850px) {
+  #mainRecetas .cards_container .card .card__item .card__content-visible {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    #mainRecetas .cards_container .cards_header {
-      width: 95%; }
-    #mainRecetas .cards_container .cards__title {
-      font-size: 40px; }
-    #mainRecetas .cards_container .cards__desc {
-      font-size: 20px; }
-    #mainRecetas .cards_container .card__txt {
-      width: 90%; }
-    #mainRecetas .cards_container .card__item {
+    flex-direction: column; }
+    #mainRecetas .cards_container .card .card__item .card__content-visible .card__img {
+      width: 90%;
+      height: 300px; }
+    #mainRecetas .cards_container .card .card__item .card__content-visible .card__title {
+      padding: 20px 0 10px 0;
+      font-size: 1.5em; }
+    #mainRecetas .cards_container .card .card__item .card__content-visible .card__desc {
+      font-size: 1em; }
+    #mainRecetas .cards_container .card .card__item .card__content-visible .card__angle {
+      top: auto;
+      bottom: 15px;
+      right: 0px; }
+  #mainRecetas .cards_container .card .card__item .card__instructions {
+    flex-direction: column; }
+    #mainRecetas .cards_container .card .card__item .card__instructions .card__ingredients {
+      width: 90%;
+      height: max-content; }
+    #mainRecetas .cards_container .card .card__item .card__instructions .card__elaboration {
+      width: 90%;
+      height: max-content; }
+  #mainRecetas .cards_container .card .card__item .show-recetas {
+    height: 800px;
+    margin-top: 50px; } }
+
+@media only screen and (max-width: 768px) {
+  #mainRecetas .banner__container {
+    height: 300px; }
+    #mainRecetas .banner__container .banner__container--img {
+      height: 300px; }
+  #mainRecetas .cards_container .card .card__item {
+    padding: 0; }
+    #mainRecetas .cards_container .card .card__item .card__content-visible {
+      padding: 40px 5% 20px; }
+      #mainRecetas .cards_container .card .card__item .card__content-visible .card__img {
+        height: 250px; }
+      #mainRecetas .cards_container .card .card__item .card__content-visible .card__title {
+        padding: 20px 0 10px 0;
+        font-size: 1.2em; }
+      #mainRecetas .cards_container .card .card__item .card__content-visible .card__label {
+        font-size: .8em; }
+      #mainRecetas .cards_container .card .card__item .card__content-visible .card__desc {
+        font-size: 1em;
+        max-width: 80%; }
+      #mainRecetas .cards_container .card .card__item .card__content-visible .card__angle {
+        position: relative;
+        width: max-content;
+        margin: 20px auto auto auto; }
+    #mainRecetas .cards_container .card .card__item .card__instructions {
+      flex-direction: column; }
+      #mainRecetas .cards_container .card .card__item .card__instructions .card__ingredients {
+        width: 90%;
+        height: max-content; }
+        #mainRecetas .cards_container .card .card__item .card__instructions .card__ingredients-title {
+          font-size: 1.2em;
+          padding: 20px 0; }
+    #mainRecetas .cards_container .card .card__item .card__elaboration {
+      width: 90%;
+      height: max-content; }
+      #mainRecetas .cards_container .card .card__item .card__elaboration-title {
+        font-size: 1.2em;
+        padding: 20px 0; }
+    #mainRecetas .cards_container .card .card__item .card__time {
       width: 100%;
-      margin: 0px 20px;
-      padding-top: 20px; }
-    #mainRecetas .cards_container .card__img {
-      width: 100%;
-      max-height: 500px; }
-    #mainRecetas .cards_container .card__title {
-      font-size: 1.4rem; }
-    #mainRecetas .cards_container .card__label {
-      font-size: 0.8rem; }
-    #mainRecetas .cards_container .card__desc {
-      font-size: 0.8rem; }
-    #mainRecetas .cards_container .card__btn {
-      margin: 15px 0px; }
-  #mainRecetas .divider {
-    display: block; } }
+      margin: 20px 10px 0 0;
+      display: flex;
+      justify-content: flex-end;
+      position: static; }
+    #mainRecetas .cards_container .card .card__item .show-recetas {
+      height: 800px;
+      margin-top: 0px;
+      padding: 5%; } }
+
+@media only screen and (max-width: 480px) {
+  #mainRecetas .cards_container .card .card__item .show-recetas {
+    height: 870px; } }
 
 #mainNosotros .banner__container {
   width: 100%;
